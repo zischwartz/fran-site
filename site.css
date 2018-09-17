@@ -96,7 +96,24 @@ nav a {
   background-image: url("./images/fran4.jpeg");
 }
 
-/*  for the single pages */
+/* is it a small screen? */
+@media only screen and (max-width: 600px) {
+  body {
+    /* for debug, to make it obvious it's working */
+    /* color: red; */
+    /* background-color: black; */
+  }
+  #content {
+    grid-gap: 5px;
+  }
+  #content a.item {
+    /* make them all full width  */
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+/*  for the pages, i.e. not the index */
 #page img {
   max-width: 100vw;
 }
