@@ -35,8 +35,9 @@ nav #links {
   text-align: right;
 }
 
-nav #links a {
-  color: rgb(0, 0, 200);
+nav a {
+  /* color: rgb(0, 0, 200); */
+  color: rgb(20, 20, 20);
   text-decoration: none;
   margin-right: 10px;
 }

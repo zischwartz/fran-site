@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "NODE_ENV=production parcel build --public-url=./ index.html -o index.html",
+    "build-puburl":
+      "NODE_ENV=production parcel build --public-url=./ index.html -o index.html",
+    "build": "NODE_ENV=production parcel build  index.html -o index.html",
     "deploy-gh-pages": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
