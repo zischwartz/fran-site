@@ -120,3 +120,18 @@ nav a {
 #page p {
   margin-left: 10px;
 }
+
+/* for the about page */
+body.about div#page {
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+body.about .info {
+  min-height: 40vh;
+}
+body.about div#page div {
+  max-width: 500px;
+}
