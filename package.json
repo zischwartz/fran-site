@@ -4,18 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build-puburl":
-      "NODE_ENV=production parcel build --public-url=./ index.html -o index.html",
-    "build": "NODE_ENV=production parcel build  index.html -o index.html",
-    "deploy-gh-pages": "yarn build && gh-pages -d dist"
-  },
-  "dependencies": {
-    "gh-pages": "^1.2.0"
+    "start": "http-server . -c-1 -o"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cssnano": "^4.1.0"
+    "cssnano": "^4.1.0",
+    "http-server": "^0.11.1"
   }
 }
