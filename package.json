@@ -1,0 +1,19 @@
+{
+  "name": "fran-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "NODE_ENV=production parcel build --public-url=./ index.html -o index.html",
+    "deploy-gh-pages": "yarn build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "gh-pages": "^1.2.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.0"
+  }
+}

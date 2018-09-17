@@ -1,0 +1,104 @@
+/* Load a font, from https://fonts.google.com/ - replace with your own ones! */
+@import url("https://fonts.googleapis.com/css?family=Vollkorn");
+
+/* Reset */
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Vollkorn", serif;
+  background-color: rgb(250, 250, 250);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.info {
+  padding: 10px;
+  min-height: 10vh;
+  /* this will nicely center the text, hotdog and hamburger both */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+nav #links {
+  /* Flexbox would be another way to do this */
+  text-align: right;
+}
+
+nav #links a {
+  color: rgb(0, 0, 200);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+#content {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  /* min-height: 70vh; */
+  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-rows: 1fr 1fr 1fr; */
+}
+
+#content a.item {
+  /* they'll be about a third of the screen size high  */
+  height: 33vh;
+  /* but max out at 500px */
+  max-height: 500px;
+  /* background-image: url("./images/fran.jpg"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(30, 40, 60);
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: 0.5s ease all;
+}
+
+#content a.item span {
+  padding: 5px;
+  transition: 0.5s ease all;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#content a.item:hover span {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3em;
+}
+
+#content a.item.first {
+  background-image: url("./images/fran.jpg");
+  /* make this one take up the whole first row */
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+#content a.item[href="./second/"] {
+  background-image: url("./images/fran2.jpg");
+}
+#content a.item[href="./third/"] {
+  background-image: url("./images/fran_bug.jpg");
+}
+#content a.item[href="./four/"] {
+  background-image: url("./images/fran4.jpeg");
+}
+
+/*  for the single pages */
+#page img {
+  max-width: 100vw;
+}
+#page p {
+  margin-left: 10px;
+}
